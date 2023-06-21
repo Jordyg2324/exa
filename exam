@@ -1,0 +1,158 @@
+
+//EJERCICIO2 de el examen
+Funcion EJERCICIO2
+	Escribir ""
+	Definir  a, b, x Como Entero
+	a = 5; b = 5
+	x = a + a * (a + b)-b * a + (trunc(b/3) - 2 +a*a mod 2)
+	Escribir "Resultado " x
+FinFuncion
+
+//ejercicio3 de el examen
+Funcion EJERCICIO3
+	Escribir ""
+	Definir n, i, j Como Entero
+	n = 5
+	para i <- 1 hasta n
+		para j <- 1 hasta i Hacer
+			
+			escribir "*" Sin Saltar
+			
+		FinPara
+		Escribir "*"
+	FinPara
+FinFuncion
+
+//EJERCICIO4 de el examen
+Funcion EJERCICIO4
+	Escribir ""
+	Definir n, m, r Como Entero
+	n = 15; m = 19; r = 1
+	mientras (r <> 0) hacer
+		r= m mod n
+		Escribir "R es> ", r
+		si (r = 0) entonces
+			Escribir "m=", m," n=", n
+		sino
+			Escribir "m1 ",m
+			Escribir "n1 ", n
+			n = m
+			m = r
+			Escribir "m2 ",m
+			Escribir "n2 ", n
+		FinSi
+	FinMientras
+FinFuncion
+
+//EJERCICIO5 de el examen
+Funcion  EJERCICIO5
+	Escribir ""
+	Dimension expresion[100]
+	Definir i Como Caracter
+	Definir j, k, l Como Entero
+	Escribir "Escriba la expresion"
+	Escribir "La expresion se ingresa al presionar -a- "
+	Mientras i <> "a" Hacer
+		leer expresion[a] 
+		i = expresion[a]
+		a<-a+1 
+	FinMientras
+	
+	para j =1 hasta a Hacer
+		si expresion[j] = "(" o expresion[j] = ")" o expresion[j] = "+" o expresion[j] = "-" o expresion[j] = "*" o expresion[j] = "/" Entonces
+			k = k+1
+		sino 
+			l = l+1
+		FinSi
+		
+	FinPara
+	
+	si k > l Entonces
+		Escribir "Hay mas operadores que numeros"
+	sino 
+		si k< l entonces
+			Escribir "Hay mas numeros que operadores"
+		sino 
+			Escribir "Hay igual operadores que numeros"
+		FinSi
+		
+	FinSi
+FinFuncion
+
+// EJERCICIO6 de el examen
+Funcion EJERCICIO6
+	
+	Escribir ""
+	
+    Escribir "INGRESE EL NOMBRE"
+	Leer nombre
+	Escribir ""
+	
+	Escribir "INGRESE LA EDAD"
+    Leer edad
+	
+    
+    base <- 5
+    
+    Si edad < 18 entonces
+        base <- base + (base * 0.05)   // Incremento del 5% en la base
+        tipo <- "menor de edad"
+    Sino si edad >= 65 entonces
+			base <- base + (base * 0.20)   // Incremento del 20% en la base
+			tipo <- "adulto mayor"
+		Sino
+			base <- base + (base * 0.15)   // Incremento del 15% en la base
+			tipo <- "mayor de edad"
+		FinSi
+		
+		pulsaciones <- (200 - edad) / base
+		
+		Escribir ""
+		Imprimir "Nombre:", nombre
+		Imprimir "Edad:", edad, "años"
+		Imprimir "Tipo:", tipo
+		Imprimir "Pulsaciones por segundo:", pulsaciones
+	FinSi
+	
+FinFuncion
+
+// EJERCICIO7 de el examen
+Funcion EJERCICIO7
+	Escribir "Ingrese los numeros"
+	Escribir "Termina al presionar -0- "
+	Definir i como entero 
+	leer i
+	mientras i <> 0 hacer 
+		
+		
+		si (i mod 2 )<> 0 y (i mod 3 )= 0 Entonces
+			
+			z=z+i
+			k=k+1
+		sino 
+			si (i mod 2) = 0 y (i mod 3 )= 0 Entonces
+				
+				x = x+i
+				j = j+1
+			FinSi
+		FinSi
+		
+		leer i
+	FinMientras
+	
+	Escribir "El promedio de los pares multiplos de 3 es: ", x/j
+	Escribir "El promedio de los impares no multiplos de 3 es: ", z/k
+FinFuncion
+
+
+
+
+
+Algoritmo sin_titulo
+	EJERCICIO2()
+	ejercicio3()
+	EJERCICIO4()
+	EJERCICIO5()
+	EJERCICIO6()
+	EJERCICIO7()
+FinAlgoritmo
